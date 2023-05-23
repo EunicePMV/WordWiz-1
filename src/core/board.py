@@ -33,7 +33,7 @@ class Board():
         self.time = 0
         self.round = 1
         self.phase = 0
-        self.max_round = 1
+        self.max_round = 6
 
         self.text_group = pg.sprite.Group()
         #MASTERMIND ALWAYS STARTS FIRST
@@ -80,7 +80,7 @@ class Board():
         self.text_group.add(text)
 
         instruction_text = TextRenderer(vec2(580, 250), font_size=1)
-        instruction_text.change_text("""Instruction:\nWelcome to WordWiz! You'll play two roles: mastermind \nand codebreaker. As the mastermind, create a 5-letter \nEnglish word. Outsmart the AI codebreaker to earn \nscores. As the codebreaker, guess the AI's word in \n6 tries or fewer to avoid score loss. There are 4 \nrounds, and scores will be tallied in the final round. \nUse your keyboard to type your guess and your mouse \nto select letters. Roles alternate each round. \nGood luck and may the best player win!""")
+        instruction_text.change_text("""Instruction:\nWelcome to WordWiz! You'll play two roles: mastermind \nand codebreaker. As the mastermind, create a 5-letter \nEnglish word. Outsmart the AI codebreaker to earn \nscores. As the codebreaker, guess the AI's word in \n6 tries or fewer to avoid score loss. There are 6 \nrounds, and scores will be tallied in the final round. \nUse your keyboard to type your guess and your mouse \nto select letters. Roles alternate each round. \nGood luck and may the best player win!""")
         instruction_text.rect.topleft = vec2(50, 300)
         self.text_group.add(instruction_text)
 
